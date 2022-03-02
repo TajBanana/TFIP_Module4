@@ -32,7 +32,7 @@ public class TaskRepository {
                 .update(SQL_ADD_NEW_TASK,
                         task.getUsername(),
                         task.getTaskName(),
-                        task.getPriority(),
+                        task.getPriority().toString(),
                         task.getDueDate())) > 0;
     }
 }

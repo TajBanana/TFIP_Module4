@@ -17,7 +17,7 @@ public class UserRepository {
         final SqlRowSet rowSet = jdbcTemplate.queryForRowSet(
                 SQL_GET_USER_BY_USERNAME, username);
 
-        System.out.println("SQL USER COUNT ROW-SET >>>> "+ rowSet);
+        System.out.println("SQL USER COUNT ROW-SET >>>> "+ rowSet.toString());
 
         if (rowSet.next()) {
             return rowSet.getInt("user_count") > 0 ;
